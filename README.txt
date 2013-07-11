@@ -1,0 +1,1 @@
+compile in the latex->PDF mode.. will give errors and fail with some images if try to compile to dvi
