@@ -227,22 +227,21 @@ All hodoscopes are also connected via $\sim$2x gain amplifier channels that allo
 
 \subsection{Triggering Scheme}
 \label{trigs}
-Triggering using three 2cm x 2cm, 5mm thick plastic scintillator counters, readout by 2" PMTs via an air waveguide to remove the PMTs from direct beam exposure.
+Triggering schema was realized using three 2cm x 2cm, 5mm thick plastic scintillator counters that were readout by 2" PMTs via an air waveguide in order to remove the PMTs from direct beam exposure. The signal from the frontmost and a middle counters were used to form a bean trigger, as indicated in the (Figure~\ref{experimentalsetup2})
 
 
 
 
 \subsection{Proton Beamline Description}
-A proton test beam was conducted at NASA Space Radiation Laboratory (NSRL) facility at BNL. The following proton beam energies were used:
-210MeV ($\sim$dE/dx of K+ from free proton decay)
-475MeV (water Cerenkov thresh.)
-2GeV ($\sim$minimum ionizing)
-Low intensity narrow beam
+A proton test beam was conducted at NASA Space Radiation Laboratory (NSRL) facility at BNL. As described above, the three proton beam energies were used:
+210MeV, 475MeV and 2GeV. The beam had the following main characteristics:
 
-Beam details:
-Intensity ~1p+/bunch
-Beam size ~1cm x1cm @ 2GeV; 5.4cm x 5.4cm @210MeV,
-0.4s spill every ~4 sec.
+\begin{itemize}
+	\item intensity of $\sim$1p+/bunch,
+	\item beam size was ~1cm x1cm at 2GeV and 5.4cm x 5.4cm at 210MeV,
+	\item 0.4s long spills every $\sim$4 sec.
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \section{Data Analysis}
 \label{dataanalysis}
@@ -260,7 +259,20 @@ Beam size ~1cm x1cm @ 2GeV; 5.4cm x 5.4cm @210MeV,
 
 The PMT signal is acquired as a waveform shown in (Figure~\ref{typicalpmtsignal}). Total aquisition window is 2560 bins per event with each bin being 1ns wide; the signal is approximately centered and the approximate position is known beforehand. A 300ns window (central one in the figure, between the red and blue lines) is used to obtain the integrated signal area by summation. Each point is subtracted from the average baseline to achieve a positive sum. A typical signal is smaller then the chosen window width, however, there is a small spread in timing of the signals and we want' to be sure that all of the signal has been integrated. The size of the chosen window is the same for all samples and measurememnts.
 
-A baseline is defined as the average value of all the points in the first integration window (between the two red lines) that is 50ns wide. To check the baseline quality, its averaged value is compared agains the average of the third window right after the signal window (between two blue lines). Events with this difference larger then ~20 ADC bins are flagged as noise ones. This allows removal of the noise events or events with bad baseline. Additionally, an average of a window at the very beginning of the waveform (between 10ns and 40ns, not shown because the figure is zoomed around the signal area) is used for general baseline quality check using the above criterion.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=100mm]{baselineitself.pdf}
+\caption{Typical baseline value for a single channel.} \label{typicalbaseline}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=100mm]{baselinedifference.pdf}
+\caption{Difference between the baseline and the average of the post-signal window.} \label{baselinedifference}
+\end{figure}
+
+
+A baseline is defined as the average value of all the points in the first integration window (between the two red lines) that is 50ns wide. A typical baseline is shown in (Figure~\ref{typicalbaseline}) To check the baseline quality, its averaged value is compared agains the average of the post-signal window (between two blue lines). This difference is illustrated in (Figure~\ref{baselinedifference}). Events with this difference larger then $\sim$20 ADC bins are flagged as bad. This allows for the removal of the noise events or events with the bad baseline. Additionally, a comparison of the baseline with an average of a window at the very beginning of the waveform (between 10ns and 40ns, not shown because the figure is zoomed around the signal area) is used for general baseline quality check using the above criterion.
 
 
 The integrated area is a measure of total charge that can be converted to the PE yield using the single PE calibration of the PMTs. This allows to describe the measured signals independent of the hardware differences between the channels.
