@@ -135,7 +135,7 @@
 
 	The Water-based Liquid Scintillator (WbLS) is a new material currently under development. It is based on the idea of dissolving the organic scintillator in water using special surfactants. This material strives to achieve the novel detection techniques by combining the Cerenkov rings and scintillation light, as well as the total cost reduction compared to pure liquid scintillator (LS).
 
-	Presented are the light yield measurements for the three different proton beam energies (210MeV, 475MeV and 2000MeV) for water, two different WbLS formulations (0.4$\%$ and 0.99$\%$) and pure LS. The results show that a goal of ~100 optical photons/MeV, indicated by the simulation to be an optimal light yield for observing both the Cerenkov ring and scintillaton light from the proton decay in a large water detector, has been achieved.
+	Presented are the light yield measurements for the three different proton beam energies (210MeV, 475MeV and 2000MeV) for water, two different WbLS formulations (0.4$\%$ and 0.99$\%$) and pure LS. The results show that a goal of ~100 optical photons/MeV, indicated by the simulation to be an optimal light yield for observing both the Cerenkov ring and scintillation light from the proton decay in a large water detector, has been achieved.
 
 \end{abstract}
 
@@ -157,14 +157,14 @@ Water based \sep liquid scintillator \sep beam test
 %% main text
 \section{Motivation}
 \label{introAndMotivation}
-In large water detectors, the Cerenkov radiation produced by a charged particle above the threshold can be used for particle identification, and the reconstruction of its direction and energy~\cite{superKkinematik}. However, all charged particles below the Cherenkov threshold are missed. Detecting these below-threshold particles is important for various applications. For example, in the search of the proton decay, in the $p^{+} \rightarrow K^{+} \overline{\nu}$ channel, where K\textsuperscript{+} is mostly below Cerenkov threshold and is invisible is a water detector. The use of the WbLS makes the kaon visible and allows for the 
+In large water detectors, the Cerenkov radiation produced by a charged particle above the threshold can be used for particle identification, and the reconstruction of its direction and energy~\cite{superKkinematik}. However, all charged particles below the Cerenkov threshold are missed. Detecting these below-threshold particles is important for various applications. For example, in the search of the proton decay, in the $p^{+} \rightarrow K^{+} \overline{\nu}$ channel, where K\textsuperscript{+} is mostly below Cerenkov threshold and is invisible is a water detector. The use of the WbLS makes the kaon visible and allows for the 
 separation of K$^{+}$, $\mu^{+}$ and e\textsuperscript{+} signals using timing and reduce background for this decay channel.
 
 In either LS or WbLS, the isotropic scintillation light is produced by the charged particle energy deposition via ionization, but the scintillator components may interfere with the Cerenkov ring detection. To detect K\textsuperscript{+} and preserve the Cerenkov ring, MC studies indicate that the light yield (LY) from the scintillator component int he WbLS should be ~100 optical photons/MeV.
 
 Thus, WbLS potentially combines both the Cerenkov ring and scintillation light capabilities. It can preserve the particle identification for the particles above the Cerenkov threshold, and detect the charged particles below the threshold via the scintillation light. In addition, WbLS features the lower cost than pure LS and it is safer to handle[ask Minfang for reference].
 
-The ability to reach the desired LY can be checked using the monoenergetic proton beam with different WbLS concentrations. For the test, the two different WbLS formulations (0.4$\%$ and 0.99$\%$), pure water and pure LS samples were chosen. Three different proton beam energies were used with each sample. The choice of the energies comes from the following considerations: 
+The ability to reach the desired LY can be checked using the mono-energetic proton beam with different WbLS concentrations. For the test, the two different WbLS formulations (0.4$\%$ and 0.99$\%$), pure water and pure LS samples were chosen. Three different proton beam energies were used with each sample. The choice of the energies comes from the following considerations: 
 
 \begin{itemize}
 	\item 2000MeV protons behave as minimum ionizing particle (MIP)
@@ -211,9 +211,11 @@ The T1 allows the capture of most of the light produced in the tub, whereas T2 a
 \caption{Proton beam test experimental setup.} \label{experimentalsetup2}
 \end{figure}.
 
-A detailed setup readout scheme is shown in (Figure~\ref{experimentalsetup2}). Both tubs were read out by Hamamatsu~\cite{hamamatsu} R7723 2"  Photo-multiplier tubes (PMT). A readout was by the 4-channel 14bit CAEN~\cite{caen} V1729A Flash Analog-to-Digital Converter (FADC). All tubs signals were connected to the FADC via a variable attenuation unit (Phillips Scientific~\cite{phillips} 804) and a variable amplifier unit (Phillips Scientific 778). For the T1 and the T2 readouts, the gain was set to the values of $\sim$2x. The first output from the amplifier goes to the FADC, with a dedicated channel for each tub. The second output from each amplifier channel was used for the single ptoho-electron (PE) calibration. The gain for the second amplification stage was set at $\sim$10x.
+A detailed setup readout scheme is shown in (Figure~\ref{experimentalsetup2}). Both tubs were read out by Hamamatsu~\cite{hamamatsu} R7723 2"  Photo-multiplier tubes (PMT). An acrylic window transparent for the ultraviolet light (UVT) was used as a partition between the PMT and the liquid in the tub. The window was protruding through the lid and into the liquid by several millimeters to ensure that there are no air bubbles on its surface.
 
-All hodoscopes are also connected via $\sim$2x gain amplifier channels that allows signal splitting. H1 and H3 share the same FADC channel with latter signal being delayed by 200ns. H2 is connected to the last remaning channel of the FADC.
+A readout was by the 4-channel 14bit CAEN~\cite{caen} V1729A Flash Analog-to-Digital Converter (FADC). All tubs signals were connected to the FADC via a variable attenuation unit (Phillips Scientific~\cite{phillips} 804) and a variable amplifier unit (Phillips Scientific 778). For the T1 and the T2 readouts, the gain was set to the values of $\sim$2x. The first output from the amplifier goes to the FADC, with a dedicated channel for each tub. The second output from each amplifier channel was used for the single photo-electron (PE) calibration. The gain for the second amplification stage was set at $\sim$10x.
+
+All hodoscopes are also connected via $\sim$2x gain amplifier channels that allows signal splitting. H1 and H3 share the same FADC channel with latter signal being delayed by 200ns. H2 is connected to the last remaining channel of the FADC.
 
 
 
@@ -227,7 +229,7 @@ All hodoscopes are also connected via $\sim$2x gain amplifier channels that allo
 
 \subsection{Triggering Scheme}
 \label{trigs}
-Triggering schema was realized using three 2cm x 2cm, 5mm thick plastic scintillator counters that were readout by 2" PMTs via an air waveguide in order to remove the PMTs from direct beam exposure. The signal from the frontmost and a middle counters were used to form a bean trigger, as indicated in the (Figure~\ref{experimentalsetup2})
+Triggering schema was realized using three 2cm x 2cm, 5mm thick plastic scintillator counters that were readout by 2" PMTs via an air waveguide in order to remove the PMTs from direct beam exposure. The signal from the front-most and a middle counters were used to form a bean trigger, as indicated in the (Figure~\ref{experimentalsetup2})
 
 
 
@@ -244,7 +246,7 @@ A proton test beam was conducted at NASA Space Radiation Laboratory (NSRL) facil
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \section{Data Analysis}
-\label{dataanalysis}
+\label{data analysis}
 \subsection{Liquids Measured}
 
 
@@ -257,7 +259,7 @@ A proton test beam was conducted at NASA Space Radiation Laboratory (NSRL) facil
 \caption{Typical PMT waveform with baseline check windows.} \label{typicalpmtsignal}
 \end{figure}
 
-The PMT signal is acquired as a waveform shown in (Figure~\ref{typicalpmtsignal}). Total aquisition window is 2560 bins per event with each bin being 1ns wide; the signal is approximately centered and the approximate position is known beforehand. A 300ns window (central one in the figure, between the red and blue lines) is used to obtain the integrated signal area by summation. Each point is subtracted from the average baseline to achieve a positive sum. A typical signal is smaller then the chosen window width, however, there is a small spread in timing of the signals and we want' to be sure that all of the signal has been integrated. The size of the chosen window is the same for all samples and measurememnts.
+The PMT signal is acquired as a waveform shown in (Figure~\ref{typicalpmtsignal}). Total acquisition window is 2560 bins per event with each bin being 1ns wide; the signal is approximately centered and the approximate position is known beforehand. A 300ns window (central one in the figure, between the red and blue lines) is used to obtain the integrated signal area by summation. Each point is subtracted from the average baseline to achieve a positive sum. A typical signal is smaller then the chosen window width, however, there is a small spread in timing of the signals and we want' to be sure that all of the signal has been integrated. The size of the chosen window is the same for all samples and measurements.
 
 \begin{figure}[ht]
 \centering
@@ -272,7 +274,7 @@ The PMT signal is acquired as a waveform shown in (Figure~\ref{typicalpmtsignal}
 \end{figure}
 
 
-A baseline is defined as the average value of all the points in the first integration window (between the two red lines) that is 50ns wide. A typical baseline is shown in (Figure~\ref{typicalbaseline}) To check the baseline quality, its averaged value is compared agains the average of the post-signal window (between two blue lines). This difference is illustrated in (Figure~\ref{baselinedifference}). Events with this difference larger then $\sim$20 ADC bins are flagged as bad. This allows for the removal of the noise events or events with the bad baseline. Additionally, a comparison of the baseline with an average of a window at the very beginning of the waveform (between 10ns and 40ns, not shown because the figure is zoomed around the signal area) is used for general baseline quality check using the above criterion.
+A baseline is defined as the average value of all the points in the first integration window (between the two red lines) that is 50ns wide. A typical baseline is shown in (Figure~\ref{typicalbaseline}) To check the baseline quality, its averaged value is compared against the average of the post-signal window (between two blue lines). This difference is illustrated in (Figure~\ref{baselinedifference}). Events with this difference larger then $\sim$20 ADC bins are flagged as bad. This allows for the removal of the noise events or events with the bad baseline. Additionally, a comparison of the baseline with an average of a window at the very beginning of the waveform (between 10ns and 40ns, not shown because the figure is zoomed around the signal area) is used for general baseline quality check using the above criterion.
 
 
 The integrated area is a measure of total charge that can be converted to the PE yield using the single PE calibration of the PMTs. This allows to describe the measured signals independent of the hardware differences between the channels.
@@ -281,9 +283,9 @@ The trigger information that is saved in the two additional FADC channels allows
 
 \subsection{Single Photo Electron Calibration}
 
-A single PE calibration was conducted for both signal channels at the end of the test beam run. For it, the trigger is produced from the discriminator that follows the second amplifier for the T1 and T2 signals (separately for each, see Figure~\ref{experimentalsetup2}). The discriminator is set to $\sim$1/10\textsuperscript{th} of the single PE amplitude as to	allows for better PE signal detection efficiency than using random trigger. Additionally, this forces the PE signal to the signal window region of the FADC output for the simplified analysis and elimination of the partially captured signals. Note that a PE signal is much narrower and lower in amplitude/area then the beam signals that are typically many PEs that arrive with time disctibution, thus a smaller integration widnow is used to reduce noise for cleaner calibration (50ns instead of 300ns).
+A single PE calibration was conducted for both signal channels at the end of the test beam run. For it, the trigger is produced from the discriminator that follows the second amplifier for the T1 and T2 signals (separately for each, see Figure~\ref{experimentalsetup2}). The discriminator is set to $\sim$1/10\textsuperscript{th} of the single PE amplitude as to	allows for better PE signal detection efficiency than using random trigger. Additionally, this forces the PE signal to the signal window region of the FADC output for the simplified analysis and elimination of the partially captured signals. Note that a PE signal is much narrower and lower in amplitude/area then the beam signals that are typically many PEs that arrive with time distribution, thus a smaller integration window is used to reduce noise for cleaner calibration (50ns instead of 300ns).
 
-The signal area calibration is 168.0$\pm$1.2 ADC bins and 132.9$\pm$1.6 ADC bins for T1 and T2 respectively (the PE signal is summed within the window, so the unit of ADC bin is still used). A special care was taken to separately verify that this method yields the same calibration values as using the light-emmiting diode (LED) scheme. For that, calibration runs using the described above scheme and using the dim LED pulses were compared to each other. The LED light level is chosen such that only $\sim$1/10\textsuperscript{th} of the events has the single PE signal to insure that these are the single photon detection responces.
+The signal area calibration is 168.0$\pm$1.2 ADC bins and 132.9$\pm$1.6 ADC bins for T1 and T2 respectively (the PE signal is summed within the window, so the unit of ADC bin is still used). A special care was taken to separately verify that this method yields the same calibration values as using the light-emitting diode (LED) scheme. For that, calibration runs using the described above scheme and using the dim LED pulses were compared to each other. The LED light level is chosen such that only $\sim$1/10\textsuperscript{th} of the events has the single PE signal to insure that these are the single photon detection responses.
 
 
 \subsection{Light Yield Analysis}
