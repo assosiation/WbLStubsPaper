@@ -215,7 +215,7 @@ A detailed setup readout scheme is shown in (Figure~\ref{experimentalsetup2}). B
 
 A readout was by the 4-channel 14bit CAEN~\cite{caen} V1729A Flash Analog-to-Digital Converter (FADC). All tubs signals were connected to the FADC via a variable attenuation unit (Phillips Scientific~\cite{phillips} 804) and a variable amplifier unit (Phillips Scientific 778). For the T1 and the T2 readouts, the gain was set to the values of $\sim$2x. The first output from the amplifier goes to the FADC, with a dedicated channel for each tub. The second output from each amplifier channel was used for the single photo-electron (PE) calibration. The gain for the second amplification stage was set at $\sim$10x.
 
-All hodoscopes are also connected via $\sim$2x gain amplifier channels that allows signal splitting. H1 and H3 share the same FADC channel with latter signal being delayed by 200ns. H2 is connected to the last remaining channel of the FADC.
+All hodoscopes also were connected via $\sim$2x gain amplifier channels that allows signal splitting. H1 and H3 shares the same FADC channel with latter signal being delayed by 200ns. H2 was connected to the last remaining channel of the FADC.
 
 
 
@@ -251,6 +251,7 @@ A proton test beam was conducted at NASA Space Radiation Laboratory (NSRL) facil
 
 
 \subsection{Waveform Analysis}
+\label{waveformanalysis}
 
 
 \begin{figure}[ht]
@@ -290,10 +291,21 @@ The signal area calibration is 168.0$\pm$1.2 ADC bins and 132.9$\pm$1.6 ADC bins
 
 \subsection{Light Yield Analysis}
 
+The analysis process involves establishing the data quality selection criteria, data fitting, interpretation of the fitting results and the systematics evaluation. Each step is included within this chapter.
 
-\subsubsection{Data selection}
+\subsubsection{Data quality selection}
 
-\subsubsection{Energy deposition}
+The data quality selection is done as a single step before the data is analysed. The care was taken to choose the criteria that do not introduce a bias into the selection. These are:
+
+\begin{itemize}
+	\item offline double trigger requirement for H1 and H2 to be above $\sim$50mV and within the expected time window,
+	\item baseline quality check as outlines in chapter~\ref{waveformanalysis},
+	\item ADC saturation check for H1 and H2.
+\end{itemize}
+
+Each check is intended to remove potential noise or multiple particles in an event. The saturation check indicates if several particles have passed thought the hodoscopes in a same beam spill that happens rarely at the intencity used.
+
+\subsection{Energy deposition}
 
 {
 \renewcommand{\arraystretch}{1.2}
@@ -316,7 +328,7 @@ The signal area calibration is 168.0$\pm$1.2 ADC bins and 132.9$\pm$1.6 ADC bins
 \end{table}
 }
 
-\subsubsection{Light Yield Results}
+\subsection{Light Yield Results}
 
 
 \subsection{Systematics}
