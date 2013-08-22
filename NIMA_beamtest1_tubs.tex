@@ -291,11 +291,11 @@ The signal area calibration is 168.0$\pm$1.2 ADC bins and 132.9$\pm$1.6 ADC bins
 
 \subsection{Light Yield Analysis}
 
-The analysis process involves establishing the data quality selection criteria, data fitting, interpretation of the fitting results and the systematics evaluation. Each step is included within this chapter.
+The analysis process involves establishing the data quality selection criteria, data fitting, interpretation of the fitting results and the evaluation of the systematic errors. Each step is included within this chapter.
 
 \subsubsection{Data quality selection}
 
-The data quality selection is done as a single step before the data is analysed. The care was taken to choose the criteria that do not introduce a bias into the selection. These are:
+The data quality selection is done as a single step before the data is analyzed. The care was taken to choose the criteria that do not introduce a bias into the selection. These are:
 
 \begin{itemize}
 	\item offline double trigger requirement for H1 and H2 to be above $\sim$50mV and within the expected time window,
@@ -303,9 +303,43 @@ The data quality selection is done as a single step before the data is analysed.
 	\item ADC saturation check for H1 and H2.
 \end{itemize}
 
-Each check is intended to remove potential noise or multiple particles in an event. The saturation check indicates if several particles have passed thought the hodoscopes in a same beam spill that happens rarely at the intencity used.
+Each check is intended to remove potential noise or multiple particles in an event. The saturation check indicates if several particles have passed thought the hodoscopes in a same beam spill that happens rarely at the intensity used.
+
+
+\subsection{Light Yield Results}
+
+For each sample and energy, a histogram of the signal areas is computed. A fit using a Gaussian and a bin likelihood method is then performed. The fitting is done in two steps - first, a Gaussian is fitted in the range between the half of the maximum peak values to obtain the first approximation. Then, the fits around the found mean with 1, 1.5 and 2$\sigma$ are carried. This is done to estimate the uncertainty that the fit width is adding because of the second peak due to the two particles passing through the tub during the same trigger time. Figure~\ref{fig:sampletubsignalfit} shows the 1.5$\sigma$ fit of the single particle fit, and the two-particle peak is visible on it as well. This plot is in the ADC bins for clarity; single-PE calibration will be applied to all further plots.
+
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=80mm]{sampletubsignalfit.pdf}
+	\label{fig:sampletubsignalfit}
+	\caption{A sample fit of a tub signal.}
+\end{figure}
+
+The data for all the samples at all energies is then processed in the same way. Plots in Figure~\ref{tub1signalInPE} and in Figure~\ref{tub2signalInPE} show the light yield results in PE for the different samples and beam energies for Tub1 and tub2 respectively.
+
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=80mm]{tub1signalInPE.pdf}
+	\label{tub1signalInPE}
+	\caption{The light yield in PE for T1. At 2GeV beam energy, some points are offset for clarity.}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=80mm]{tub2signalInPE.pdf}
+	\label{tub2signalInPE}
+	\caption{The light yield in PE for T2.}
+\end{figure}
+
 
 \subsection{Energy deposition}
+
+In order to estimate the PE/MeV light yield of each sample, the energy deposition in each sample is needed. Two methods were used for this purpose: a GEANT4 simulation of the beamline setup with the deposition being the mean of the 1000runs at each energy, and a simplified code that would calculate the proton energy loss along a straight line path through the tubs and hodoscopes with small steps, using the proton stopping power and range tables (PSTAR) from the National Institute of Standards and Technology (NIST). The WbLS was modeled as water, and the LS as toluene. 
+
+The resulting energy depositions are listed in Table~\ref{tab:EnergyDepositionInSamples}. The difference between the two methods is taken as the uncertainty for the values obtained.
+
 
 {
 \renewcommand{\arraystretch}{1.2}
@@ -328,7 +362,6 @@ Each check is intended to remove potential noise or multiple particles in an eve
 \end{table}
 }
 
-\subsection{Light Yield Results}
 
 
 \subsection{Systematics}
