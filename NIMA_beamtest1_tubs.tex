@@ -239,7 +239,7 @@ A proton test beam was conducted at NASA Space Radiation Laboratory (NSRL) facil
 210MeV, 475MeV and 2GeV. The beam had the following main characteristics:
 
 \begin{itemize}
-	\item intensity of $\sim$1p+/bunch,
+	\item intensity of $\sim$1p\textsuperscript{+}/bunch,
 	\item beam size was ~1cm x1cm at 2GeV and 5.4cm x 5.4cm at 210MeV,
 	\item 0.4s long spills every $\sim$4 sec.
 \end{itemize}
@@ -248,6 +248,19 @@ A proton test beam was conducted at NASA Space Radiation Laboratory (NSRL) facil
  \section{Data Analysis}
 \label{data analysis}
 \subsection{Liquids Measured}
+????
+
+4 samples tested:
+ Water (purified)
+ WbLS-1: 0.4%LS
+ WbLS-2: 0.99%LS
+ LS: 100% LS
+
+Water (purified)
+ WbLS-1: 0.4%PC+0.4g/L PPO+3mg/L MSB+surfactant in water
+ WbLS-2: 0.99%PC+1.36g/L PPO+7.48mg/L MSB+surfactant in water
+ LS: LAB + 2g/L PPO + 15mg/L MSB.
+
 
 
 \subsection{Waveform Analysis}
@@ -338,7 +351,7 @@ The data for all the samples at all energies is then processed in the same way. 
 
 In order to estimate the PE/MeV light yield of each sample, the energy deposition in each sample is needed. Two methods were used for this purpose: a GEANT4 simulation of the beamline setup with the deposition being the mean of the 1000runs at each energy, and a simplified code that would calculate the proton energy loss along a straight line path through the tubs and hodoscopes with small steps, using the proton stopping power and range tables (PSTAR) from the National Institute of Standards and Technology (NIST). The WbLS was modeled as water, and the LS as toluene. 
 
-The resulting energy depositions are listed in Table~\ref{tab:EnergyDepositionInSamples}. The difference between the two methods is taken as the uncertainty for the values obtained.
+The resulting energy depositions are listed in Table~\ref{tab:EnergyDepositionInSamples}. The difference between the two methods is taken as the uncertainty for the values obtained (summed with RMS of the mean as square root of the sum of the squares).
 
 
 {
@@ -351,12 +364,12 @@ The resulting energy depositions are listed in Table~\ref{tab:EnergyDepositionIn
 		\hline \hline
 		Beam Energy & Sample & T1 Energy & T2 Energy \\
 		(MeV) & ~ & Deposit (MeV) & Deposit (MeV) \\ [0.5ex] \hline
-		~ & Water, WbLS & 70 & 113 \\
-    \raisebox{1.5ex}{210} & LS & 59 & 124 \\
-    ~ & Water, WbLS & 39 & 42 \\
-    \raisebox{1.5ex}{475} & LS & 34 & 36 \\
-    ~ & Water, WbLS & 28 & 28 \\
-    \raisebox{1.5ex}{2000} & LS & 24 & 24 \\
+		~ & Water, WbLS & 72.7$\pm$3.1 & 107.5$\pm$6.1 \\
+    \raisebox{1.5ex}{210} & LS & 59$\pm$ & 124$\pm$ \\
+    ~ & Water, WbLS & 40.4$\pm$2.0 & 43.7$\pm$2.2 \\
+    \raisebox{1.5ex}{475} & LS & 34$\pm$ & 36$\pm$ \\
+    ~ & Water, WbLS & 28.6$\pm$2.6 & 28.7$\pm$3.1 \\
+    \raisebox{1.5ex}{2000} & LS & 24$\pm$ & 24$\pm$ \\
 		[1ex] \hline
 		\end{tabular}
 \end{table}
