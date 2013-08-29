@@ -177,7 +177,7 @@ The ability to reach the desired LY can be checked using the mono-energetic prot
  \section{Experimental Setup}
  \label{setup1}
 
-The experimental setup used for the proton beam test is shown in (Figure~\ref{experimentalsetup1}). Two tubs with the samples were used (T1 and T2). Three 2cm x 2cm 5mm thick plastic scintillator hodoscopes were used (H1 to H3) with the beam trigger being formed by the coincidence of the H1\&H2 only. H3 was intended to verify whether particles exit T2.
+The experimental setup used for the proton beam test is shown in Figure~\ref{experimentalsetup1}. Two tubs with the samples were used (T1 and T2). Three 2cm x 2cm 5mm thick plastic scintillator hodoscopes were used (H1 to H3) with the beam trigger being formed by the coincidence of the H1\&H2 only. H3 was intended to verify whether particles exit T2.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=100mm]{beamtestschematics1.pdf}
@@ -197,7 +197,7 @@ Two tubs were used in the experiment:
   \item T2 from Aluminum, coated with black PTFE (very low reflectivity).
 \end{itemize}
 
-The T1 allows the capture of most of the light produced in the tub, whereas T2 allows for the observation of the light coming directly from the scintillation without the multiple wall reflections. An image of a tub is in (Figure~\ref{whitetubpicture}). Both T1 and T2 have the same dimensions:
+The T1 allows the capture of most of the light produced in the tub, whereas T2 allows for the observation of the light coming directly from the scintillation without the multiple wall reflections. An image of a tub is in Figure~\ref{whitetubpicture}. Both T1 and T2 have the same dimensions:
 
 \begin{itemize}
 	\item the lid is 19.05mm thick,
@@ -211,7 +211,7 @@ The T1 allows the capture of most of the light produced in the tub, whereas T2 a
 \caption{Proton beam test experimental setup.} \label{experimentalsetup2}
 \end{figure}.
 
-A detailed setup readout scheme is shown in (Figure~\ref{experimentalsetup2}). Both tubs were read out by Hamamatsu~\cite{hamamatsu} R7723 2"  Photo-multiplier tubes (PMT). An acrylic window transparent for the ultraviolet light (UVT) was used as a partition between the PMT and the liquid in the tub. The window was protruding through the lid and into the liquid by several millimeters to ensure that there are no air bubbles on its surface.
+A detailed setup readout scheme is shown in Figure~\ref{experimentalsetup2}. Both tubs were read out by Hamamatsu~\cite{hamamatsu} R7723 2"  Photo-multiplier tubes (PMT). An acrylic window transparent for the ultraviolet light (UVT) was used as a partition between the PMT and the liquid in the tub. The window was protruding through the lid and into the liquid by several millimeters to ensure that there are no air bubbles on its surface.
 
 A readout was by the 4-channel 14bit CAEN~\cite{caen} V1729A Flash Analog-to-Digital Converter (FADC). All tubs signals were connected to the FADC via a variable attenuation unit (Phillips Scientific~\cite{phillips} 804) and a variable amplifier unit (Phillips Scientific 778). For the T1 and the T2 readouts, the gain was set to the values of $\sim$2x. The first output from the amplifier goes to the FADC, with a dedicated channel for each tub. The second output from each amplifier channel was used for the single photo-electron (PE) calibration. The gain for the second amplification stage was set at $\sim$10x.
 
@@ -229,12 +229,13 @@ All hodoscopes also were connected via $\sim$2x gain amplifier channels that all
 
 \subsection{Triggering Scheme}
 \label{trigs}
-Triggering schema was realized using three 2cm x 2cm, 5mm thick plastic scintillator counters that were readout by 2" PMTs via an air waveguide in order to remove the PMTs from direct beam exposure. The signal from the front-most and a middle counters were used to form a bean trigger, as indicated in the (Figure~\ref{experimentalsetup2})
+Triggering schema was realized using three 2cm x 2cm, 5mm thick plastic scintillator counters that were readout by 2" PMTs via an air waveguide in order to remove the PMTs from direct beam exposure. The signal from the front-most and a middle counters were used to form a bean trigger, as indicated in the Figure~\ref{experimentalsetup2}.
 
 
 
 
 \subsection{Proton Beamline Description}
+\label{pbeamsection}
 A proton test beam was conducted at NASA Space Radiation Laboratory (NSRL) facility at BNL. As described above, the three proton beam energies were used:
 210MeV, 475MeV and 2GeV. The beam had the following main characteristics:
 
@@ -246,21 +247,26 @@ A proton test beam was conducted at NASA Space Radiation Laboratory (NSRL) facil
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \section{Data Analysis}
-\label{data analysis}
+ \label{dataanalysissectiontop}
+
+
 \subsection{Liquids Measured}
-????
-
+\label{liquidsmeasuredsection}
+???? how much details? this is a question to chemists.
 4 samples tested:
- Water (purified)
- WbLS-1: 0.4%LS
- WbLS-2: 0.99%LS
- LS: 100% LS
+\begin{itemize}
 
-Water (purified)
- WbLS-1: 0.4%PC+0.4g/L PPO+3mg/L MSB+surfactant in water
- WbLS-2: 0.99%PC+1.36g/L PPO+7.48mg/L MSB+surfactant in water
- LS: LAB + 2g/L PPO + 15mg/L MSB.
+ \item{Water (purified)}
+ \item{WbLS-1: 0.4$\%$LS}
+ \item{WbLS-2: 0.99$\%$LS}
+ \item{LS: 100$\%$ LS}
+\item{OR}
 
+\item{Water (purified)}
+ \item{WbLS-1: 0.4$\%$PC +0.4g/L PPO+3mg/L MSB+surfactant in water}
+ \item{WbLS-2: 0.99$\%$PC +1.36g/L PPO+7.48mg/L MSB+surfactant in water}
+ \item{LS: LAB + 2g/L PPO + 15mg/L MSB.}
+\end{itemize}
 
 
 \subsection{Waveform Analysis}
@@ -273,7 +279,7 @@ Water (purified)
 \caption{Typical PMT waveform with baseline check windows.} \label{typicalpmtsignal}
 \end{figure}
 
-The PMT signal is acquired as a waveform shown in (Figure~\ref{typicalpmtsignal}). Total acquisition window is 2560 bins per event with each bin being 1ns wide; the signal is approximately centered and the approximate position is known beforehand. A 300ns window (central one in the figure, between the red and blue lines) is used to obtain the integrated signal area by summation. Each point is subtracted from the average baseline to achieve a positive sum. A typical signal is smaller then the chosen window width, however, there is a small spread in timing of the signals and we want' to be sure that all of the signal has been integrated. The size of the chosen window is the same for all samples and measurements.
+The PMT signal is acquired as a waveform shown in Figure~\ref{typicalpmtsignal}. Total acquisition window is 2560 bins per event with each bin being 1ns wide; the signal is approximately centered and the approximate position is known beforehand. A 300ns window (central one in the figure, between the red and blue lines) is used to obtain the integrated signal area by summation. Each point is subtracted from the average baseline to achieve a positive sum. A typical signal is smaller then the chosen window width, however, there is a small spread in timing of the signals and we want' to be sure that all of the signal has been integrated. The size of the chosen window is the same for all samples and measurements.
 
 \begin{figure}[ht]
 \centering
@@ -288,7 +294,7 @@ The PMT signal is acquired as a waveform shown in (Figure~\ref{typicalpmtsignal}
 \end{figure}
 
 
-A baseline is defined as the average value of all the points in the first integration window (between the two red lines) that is 50ns wide. A typical baseline is shown in (Figure~\ref{typicalbaseline}) To check the baseline quality, its averaged value is compared against the average of the post-signal window (between two blue lines). This difference is illustrated in (Figure~\ref{baselinedifference}). Events with this difference larger then $\sim$20 ADC bins are flagged as bad. This allows for the removal of the noise events or events with the bad baseline. Additionally, a comparison of the baseline with an average of a window at the very beginning of the waveform (between 10ns and 40ns, not shown because the figure is zoomed around the signal area) is used for general baseline quality check using the above criterion.
+A baseline is defined as the average value of all the points in the first integration window (between the two red lines) that is 50ns wide. A typical baseline is shown in Figure~\ref{typicalbaseline} To check the baseline quality, its averaged value is compared against the average of the post-signal window (between two blue lines). This difference is illustrated in Figure~\ref{baselinedifference}. Events with this difference larger then $\sim$20 ADC bins are flagged as bad. This allows for the removal of the noise events or events with the bad baseline. Additionally, a comparison of the baseline with an average of a window at the very beginning of the waveform (between 10ns and 40ns, not shown because the figure is zoomed around the signal area) is used for general baseline quality check using the above criterion.
 
 
 The integrated area is a measure of total charge that can be converted to the PE yield using the single PE calibration of the PMTs. This allows to describe the measured signals independent of the hardware differences between the channels.
@@ -296,17 +302,15 @@ The integrated area is a measure of total charge that can be converted to the PE
 The trigger information that is saved in the two additional FADC channels allows for the offline trigger requirements be used.
 
 \subsection{Single Photo Electron Calibration}
+\label{singlePEcalibsection}
 
 A single PE calibration was conducted for both signal channels at the end of the test beam run. For it, the trigger is produced from the discriminator that follows the second amplifier for the T1 and T2 signals (separately for each, see Figure~\ref{experimentalsetup2}). The discriminator is set to $\sim$1/10\textsuperscript{th} of the single PE amplitude as to	allows for better PE signal detection efficiency than using random trigger. Additionally, this forces the PE signal to the signal window region of the FADC output for the simplified analysis and elimination of the partially captured signals. Note that a PE signal is much narrower and lower in amplitude/area then the beam signals that are typically many PEs that arrive with time distribution, thus a smaller integration window is used to reduce noise for cleaner calibration (50ns instead of 300ns).
 
 The signal area calibration is 168.0$\pm$1.2 ADC bins and 132.9$\pm$1.6 ADC bins for T1 and T2 respectively (the PE signal is summed within the window, so the unit of ADC bin is still used). A special care was taken to separately verify that this method yields the same calibration values as using the light-emitting diode (LED) scheme. For that, calibration runs using the described above scheme and using the dim LED pulses were compared to each other. The LED light level is chosen such that only $\sim$1/10\textsuperscript{th} of the events has the single PE signal to insure that these are the single photon detection responses.
 
 
-\subsection{Light Yield Analysis}
-
-The analysis process involves establishing the data quality selection criteria, data fitting, interpretation of the fitting results and the evaluation of the systematic errors. Each step is included within this chapter.
-
-\subsubsection{Data quality selection}
+\subsection{Data quality selection}
+\label{dataqualitysection}
 
 The data quality selection is done as a single step before the data is analyzed. The care was taken to choose the criteria that do not introduce a bias into the selection. These are:
 
@@ -320,38 +324,42 @@ Each check is intended to remove potential noise or multiple particles in an eve
 
 
 \subsection{Light Yield Results}
-
-For each sample and energy, a histogram of the signal areas is computed. A fit using a Gaussian and a bin likelihood method is then performed. The fitting is done in two steps - first, a Gaussian is fitted in the range between the half of the maximum peak values to obtain the first approximation. Then, the fits around the found mean with 1, 1.5 and 2$\sigma$ are carried. This is done to estimate the uncertainty that the fit width is adding because of the second peak due to the two particles passing through the tub during the same trigger time. Figure~\ref{fig:sampletubsignalfit} shows the 1.5$\sigma$ fit of the single particle fit, and the two-particle peak is visible on it as well. This plot is in the ADC bins for clarity; single-PE calibration will be applied to all further plots.
+\label{lightyieldsection}
 
 \begin{figure}[ht]
 	\centering
 		\includegraphics[width=80mm]{sampletubsignalfit.pdf}
-	\label{fig:sampletubsignalfit}
 	\caption{A sample fit of a tub signal.}
+	\label{sampletubsignalfit}
 \end{figure}
 
-The data for all the samples at all energies is then processed in the same way. Plots in Figure~\ref{tub1signalInPE} and in Figure~\ref{tub2signalInPE} show the light yield results in PE for the different samples and beam energies for Tub1 and tub2 respectively.
+For each sample and energy, a histogram of the signal areas is computed. A fit using a Gaussian and a bin likelihood method is then performed. The fitting is done in two steps - first, a Gaussian is fitted in the range between the half of the maximum peak values to obtain the first approximation. Then, the fits around the found mean with 1, 1.5 and 2$\sigma$ are carried. This is done to estimate the uncertainty that the fit width is adding because of the second peak due to the two particles passing through the tub during the same trigger time. 
+Figure~\ref{sampletubsignalfit} shows the 1.5$\sigma$ fit of the single particle fit, and the two-particle peak is visible on it as well. This plot is in the ADC bins for clarity; single-PE calibration will be applied to all further plots.
+
+
+
+The data for all the samples at all energies is then processed in the same way. Plots in Figure~\ref{tub1signalInPE} and in Figure~\ref{tub2signalInPE} show the light yield results in PE for the different samples and beam energies for Tub1 and tub2 respectively. Note that the LS light yield values plotted are reduced by a factor of 30. In addition, the data point for the LS at 210MeV for T1 is not going to be shown on firther plots because of the readout saturation due to large light amount.
 
 \begin{figure}[ht]
 	\centering
-		\includegraphics[width=80mm]{tub1signalInPE.pdf}
-	\label{tub1signalInPE}
+		\includegraphics[width=100mm]{tub1signalInPE.pdf}
 	\caption{The light yield in PE for T1. At 2GeV beam energy, some points are offset for clarity.}
+	\label{tub1signalInPE}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-		\includegraphics[width=80mm]{tub2signalInPE.pdf}
-	\label{tub2signalInPE}
+		\includegraphics[width=100mm]{tub2signalInPE.pdf}
 	\caption{The light yield in PE for T2.}
+	\label{tub2signalInPE}
 \end{figure}
 
 
 \subsection{Energy deposition}
+\label{edepsection}
 
-In order to estimate the PE/MeV light yield of each sample, the energy deposition in each sample is needed. Two methods were used for this purpose: a GEANT4 simulation of the beamline setup with the deposition being the mean of the 1000runs at each energy, and a simplified code that would calculate the proton energy loss along a straight line path through the tubs and hodoscopes with small steps, using the proton stopping power and range tables (PSTAR) from the National Institute of Standards and Technology (NIST). The WbLS was modeled as water, and the LS as toluene. 
+In order to estimate the PE/MeV light yield of each sample, the energy deposition in each sample is needed. Two methods were used for this purpose: a GEANT4 simulation of the beamline setup with the deposition being the mean of the 1000 runs at each energy, and a simplified code that would calculate the proton energy loss along a straight line path through the tubs and hodoscopes with small steps, using the proton stopping power and range tables (PSTAR) from the National Institute of Standards and Technology (NIST). The WbLS was modeled as water, and the LS as toluene. 
 
-The resulting energy depositions are listed in Table~\ref{tab:EnergyDepositionInSamples}. The difference between the two methods is taken as the uncertainty for the values obtained (summed with RMS of the mean as square root of the sum of the squares).
 
 
 {
@@ -375,13 +383,27 @@ The resulting energy depositions are listed in Table~\ref{tab:EnergyDepositionIn
 \end{table}
 }
 
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=100mm]{tub1signalInPEperMEV.pdf}
+	\caption{The light yield in PE/MeV for T1. At 2GeV beam energy, some points are offset for clarity.}
+	\label{fig:tub1signalInPEperMeV}
+\end{figure}
+
+The resulting energy depositions are listed in Table~\ref{tab:EnergyDepositionInSamples}. The difference between the two methods is taken as the uncertainty for the values obtained (summed as square root of the sum of the squares with the RMS of the mean). The converted into the PE/MeV light yield is shown in Figure~\ref{fig:tub1signalInPEperMeV} for the T1 and in Figure~\ref{fig:tub1signalInPEperMeV} for the T2.
+
 
 
 \subsection{Systematics}
+\label{systematicssection}
+
+asdf
 
 \subsubsection{Calibration Stability}
+\label{calibstabilitysection}
 
  \section{Conclusion}
+ \label{conclusionsection}
 
 
 %% References
