@@ -338,7 +338,7 @@ Figure~\ref{sampletubsignalfit} shows the 1.5$\sigma$ fit of the single particle
 
 
 
-The data for all the samples at all energies is then processed in the same way. Plots in Figure~\ref{tub1signalInPE} and in Figure~\ref{tub2signalInPE} show the light yield results in PE for the different samples and beam energies for Tub1 and tub2 respectively. Note that the LS light yield values plotted are reduced by a factor of 30. In addition, the data point for the LS at 210MeV for T1 is not going to be shown on firther plots because of the readout saturation due to large light amount.
+The data for all the samples at all energies is then processed in the same way. Plots in Figure~\ref{tub1signalInPE} and in Figure~\ref{tub2signalInPE} show the light yield results in PE for the different samples and beam energies for Tub1 and tub2 respectively. Note that the LS light yield values plotted are reduced by a factor of 30. In addition, the data point for the LS at 210MeV for T1 is not going to be shown on firther plots because of the readout saturation due to large light amount. Similarly, the water data is not shown for T2 due to very low signal for proton energies below the Cerenkov limit and some technical difficulties during the data aquisition.
 
 \begin{figure}[ht]
 	\centering
@@ -358,7 +358,7 @@ The data for all the samples at all energies is then processed in the same way. 
 \subsection{Energy deposition}
 \label{edepsection}
 
-In order to estimate the PE/MeV light yield of each sample, the energy deposition in each sample is needed. Two methods were used for this purpose: a GEANT4 simulation of the beamline setup with the deposition being the mean of the 1000 runs at each energy, and a simplified code that would calculate the proton energy loss along a straight line path through the tubs and hodoscopes with small steps, using the proton stopping power and range tables (PSTAR) from the National Institute of Standards and Technology (NIST). The WbLS was modeled as water, and the LS as toluene. 
+In order to assess the PE/MeV light yield of each sample, the energy deposition in each sample is needed. Two methods were used for this purpose: a GEANT4 simulation of the beamline setup with the deposition being the mean of the 1000 runs at each energy, and a simplified code that would calculate the proton energy loss along a straight line path through the tubs and hodoscopes with small steps, using the proton stopping power and range tables (PSTAR) from the National Institute of Standards and Technology (NIST). The WbLS was modeled as water, and the LS as toluene. 
 
 
 
@@ -399,10 +399,26 @@ In order to estimate the PE/MeV light yield of each sample, the energy depositio
 
 The resulting energy depositions are listed in Table~\ref{tab:EnergyDepositionInSamples}. The difference between the two methods is taken as the uncertainty for the values obtained (summed as square root of the sum of the squares with the RMS of the mean). The converted into the PE/MeV light yield is shown in Figure~\ref{fig:tub1signalInPEperMeV} for the T1 and in Figure~\ref{fig:tub2signalInPEperMeV} for the T2.
 
+We see that the PE/MeV light yield is the same for LS at proton energies of 2GeV and 475MeV on both tubs, indicating that the Cerenkov ligh contribution is negligible for LS. It is not so for the WbLS, there is a significant LY change between these two energies. However, at 475MeV, there is virtually no Cerenkov light contribution to the total LY, thus, can use the data at this energy for LS to WbLS comparison and for obtaining the LY of the scintillator components of the WbLS.
+
 \subsection{Light Yield in Photons/MeV}
 
 \begin{equation} \frac{dN}{dx} \approx 370 z^2 (E_{max} - E_{min} - \frac{1}{\beta^2} \frac{E_{max} - E_{min}}{n^2_{ave}}) \label{eq:cherenkovlight} \end{equation}
 
+
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=100mm]{475MEV_RatioToLS.pdf}
+	\caption{The WbLS light yield ratio to LS at 475MeV. Some points are offset for clarity.}
+	\label{fig:475MEV_RatioToLS}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=100mm]{210MEV_RatioToLS.pdf}
+	\caption{The WbLS light yield ratio to LS at 210MeV. Only data for T2 is shown. Some points are offset for clarity.}
+	\label{fig:210MEV_RatioToLS}
+\end{figure}
 
 \subsection{Systematics}
 \label{systematicssection}
