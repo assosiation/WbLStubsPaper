@@ -338,7 +338,7 @@ Figure~\ref{sampletubsignalfit} shows the 1.5$\sigma$ fit of the single particle
 
 
 
-The data for all the samples at all energies is then processed in the same way. Plots in Figure~\ref{tub1signalInPE} and in Figure~\ref{tub2signalInPE} show the light yield results in PE for the different samples and beam energies for Tub1 and tub2 respectively. Note that the LS light yield values plotted are reduced by a factor of 30. In addition, the data point for the LS at 210MeV for T1 is not going to be shown on firther plots because of the readout saturation due to large light amount. Similarly, the water data is not shown for T2 due to very low signal for proton energies below the Cerenkov limit and some technical difficulties during the data aquisition.
+The data for all the samples at all energies is then processed in the same way. Plots in Figure~\ref{tub1signalInPE} and in Figure~\ref{tub2signalInPE} show the light yield results in PE for the different samples and beam energies for Tub1 and tub2 respectively. Note that the LS light yield values plotted are reduced by a factor of 30. In addition, the data point for the LS at 210MeV for T1 is not going to be shown on further plots because of the readout saturation due to large light amount. Similarly, the water data is not shown for T2 due to very low signal for proton energies below the Cerenkov limit and some technical difficulties during the data acquisition.
 
 \begin{figure}[ht]
 	\centering
@@ -399,12 +399,7 @@ In order to assess the PE/MeV light yield of each sample, the energy deposition 
 
 The resulting energy depositions are listed in Table~\ref{tab:EnergyDepositionInSamples}. The difference between the two methods is taken as the uncertainty for the values obtained (summed as square root of the sum of the squares with the RMS of the mean). The converted into the PE/MeV light yield is shown in Figure~\ref{fig:tub1signalInPEperMeV} for the T1 and in Figure~\ref{fig:tub2signalInPEperMeV} for the T2.
 
-We see that the PE/MeV light yield is the same for LS at proton energies of 2GeV and 475MeV on both tubs, indicating that the Cerenkov ligh contribution is negligible for LS. It is not so for the WbLS, there is a significant LY change between these two energies. However, at 475MeV, there is virtually no Cerenkov light contribution to the total LY, thus, can use the data at this energy for LS to WbLS comparison and for obtaining the LY of the scintillator components of the WbLS.
-
-\subsection{Light Yield in Photons/MeV}
-
-\begin{equation} \frac{dN}{dx} \approx 370 z^2 (E_{max} - E_{min} - \frac{1}{\beta^2} \frac{E_{max} - E_{min}}{n^2_{ave}}) \label{eq:cherenkovlight} \end{equation}
-
+We see that the PE/MeV light yield is the same for LS at proton energies of 2GeV and 475MeV on both tubs, indicating that the Cerenkov light contribution is negligible for LS. It is not so for the WbLS, there is a significant LY change between these two energies. However, at 475MeV, there is virtually no Cerenkov light contribution to the total LY, thus, can use the data at this energy for LS to WbLS comparison and for obtaining the LY of the scintillator components of the WbLS. Figure~\ref{fig:475MEV_RatioToLS} and Figure~\ref{fig:210MEV_RatioToLS} show the ratio of the WbLS signal to the LS signal for the T1 and T2 at the proton energy of 475MeV, and the same ratio for the T2 only for the 210MeV (due to the saturation of the LS signal in T1 at this energy).
 
 \begin{figure}[ht]
 	\centering
@@ -419,6 +414,21 @@ We see that the PE/MeV light yield is the same for LS at proton energies of 2GeV
 	\caption{The WbLS light yield ratio to LS at 210MeV. Only data for T2 is shown. Some points are offset for clarity.}
 	\label{fig:210MEV_RatioToLS}
 \end{figure}
+
+\subsection{Light Yield in Photons/MeV}
+
+An estimate of the LY in photons/MeV is also possible. The calibration needed here is to estimate the efficiency if the PMT readout from the T1 and T2. Typically, this is a difficult task to carry out exactly, so two simple methods have been used to do this estimate.
+
+First method is based on the fact that the LY is photons is known for the LS to be ~10k photons/MeV for a MIP signal [reference]. Since the proton at 2GeV has the ~same dE/dx as MIP, this dataset can be used to get the approximate efficiency for each tub (e.g. PE to photon conversion) and use it for the WbLS data. The second one can be used for T1 only and it was used to check the validity of the first method. The difference between the methods was added to the total uncertainty of the result. For T1, we can use the 2GeV proton data on water to try and estimate the number of the protons produced using the Equation~\ref{eq:cherenkovlight} that is commonly used to estimate the photon LY for the Cerenkov radiation in water [need reference or no/].
+
+\begin{equation} \frac{dN}{dx} \approx 370 z^2 (E_{max} - E_{min} - \frac{1}{\beta^2} \frac{E_{max} - E_{min}}{n^2_{ave}}) \label{eq:cherenkovlight} \end{equation}
+
+The average index of refraction for the optical range was used, the $E_{max}$ and $E_{min}$ have been taken from the PMT sensitivity data. To get a better estimate, the sensitivity range for the T1 PMT was divided into a number of small sub-ranges with ~constant sensitivity and the results were weighted by the sensitivity and combined together for a better estimate. Using the resulting PE to photon conversion, the 2GeV proton LS data was used to compare the number produced by the second method to the value used in the first method. The result cave very close to be 9713 photons/MeV for the LS using the second method for T1.
+
+The estimate results for the WbLS data are presented in Figure.
+
+
+
 
 \subsection{Systematics}
 \label{systematicssection}
