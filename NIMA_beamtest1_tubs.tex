@@ -355,6 +355,11 @@ The data for all the samples at all energies is then processed in the same way. 
 \end{figure}
 
 
+%\subsubsection{Teflon Light Yield}
+%\label{teflonlight}
+%As Cerenkov light occurs in the tefon walls of the T1, this contribution has been astimated using the empty T1 tub with the cosmic muons.
+
+
 \subsection{Energy deposition}
 \label{edepsection}
 
@@ -411,7 +416,7 @@ We see that the PE/MeV light yield is the same for LS at proton energies of 2GeV
 \begin{figure}[ht]
 	\centering
 		\includegraphics[width=100mm]{210MEV_RatioToLS.pdf}
-	\caption{The WbLS light yield ratio to LS at 210MeV. Only data for T2 is shown. Some points are offset for clarity.}
+	\caption{The WbLS light yield ratio to LS at 210MeV. Only data for T2 is shown.}
 	\label{fig:210MEV_RatioToLS}
 \end{figure}
 
@@ -419,16 +424,28 @@ We see that the PE/MeV light yield is the same for LS at proton energies of 2GeV
 
 An estimate of the LY in photons/MeV is also possible. The calibration needed here is to estimate the efficiency if the PMT readout from the T1 and T2. Typically, this is a difficult task to carry out exactly, so two simple methods have been used to do this estimate.
 
-First method is based on the fact that the LY is photons is known for the LS to be ~10k photons/MeV for a MIP signal [reference]. Since the proton at 2GeV has the ~same dE/dx as MIP, this dataset can be used to get the approximate efficiency for each tub (e.g. PE to photon conversion) and use it for the WbLS data. The second one can be used for T1 only and it was used to check the validity of the first method. The difference between the methods was added to the total uncertainty of the result. For T1, we can use the 2GeV proton data on water to try and estimate the number of the protons produced using the Equation~\ref{eq:cherenkovlight} that is commonly used to estimate the photon LY for the Cerenkov radiation in water [need reference or no/].
+First method is based on the fact that the LY is photons is known for the LS to be ~10k photons/MeV for a MIP signal~\cite{LYscintanddirection}. Since the proton at 2GeV has the ~same dE/dx as MIP, this dataset can be used to get the approximate efficiency for each tub (e.g. PE to photon conversion) and use it for the WbLS data. The second one can be used for T1 only and it was used to check the validity of the first method. The difference between the methods was added to the total uncertainty of the result. For T1, we can use the 2GeV proton data on water to try and estimate the number of the protons produced using the Equation~\ref{eq:cherenkovlight} that is commonly used to estimate the photon LY for the Cerenkov radiation in water [need reference or no/].
 
 \begin{equation} \frac{dN}{dx} \approx 370 z^2 (E_{max} - E_{min} - \frac{1}{\beta^2} \frac{E_{max} - E_{min}}{n^2_{ave}}) \label{eq:cherenkovlight} \end{equation}
 
 The average index of refraction for the optical range was used, the $E_{max}$ and $E_{min}$ have been taken from the PMT sensitivity data. To get a better estimate, the sensitivity range for the T1 PMT was divided into a number of small sub-ranges with ~constant sensitivity and the results were weighted by the sensitivity and combined together for a better estimate. Using the resulting PE to photon conversion, the 2GeV proton LS data was used to compare the number produced by the second method to the value used in the first method. The result cave very close to be 9713 photons/MeV for the LS using the second method for T1.
 
-The estimate results for the WbLS data are presented in Figure.
+The estimate results for the WbLS data are presented in Figure~\ref{fig:tub1signalInPhotonsperMEV} and in Figure~\ref{fig:tub2signalInPhotonsperMEV} for the T1 and T2 respectively. As it can be seen from these figures, the estimate shows that the goal of about 100 photons/MeV has been reached using the WbLS2 sample, and different LY are possible by adjusting the concentrations.
 
 
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=100mm]{tub1signalInPhotonsperMEV.pdf}
+	\caption{The light yield in Photons/MeV for T1. At 2GeV beam energy, some points are offset for clarity.}
+	\label{fig:tub1signalInPhotonsperMEV}
+\end{figure}
 
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=100mm]{tub2signalInPhotonsperMEV.pdf}
+	\caption{The light yield in Photons/MeV for T2.}
+	\label{fig:tub2signalInPhotonsperMEV}
+\end{figure}
 
 \subsection{Systematics}
 \label{systematicssection}
@@ -470,6 +487,7 @@ asdf
 \bibitem{hamamatsu} Hamamatsu Photonics, 314-5 Shimokanzo, Toyooka-village, Iwatagun, Shizuoka-ken, 438-0193 Japan; http://www.hamamatsu.com
 \bibitem{caen} CAEN (Costruzioni Apparecchiature Elettroniche Nucleari S.p.A.), Via della Vetraia 11, 55049 Viareggio, Province of Lucca, Italy, 0584 388398.
 \bibitem{phillips} Phillips Scientific, 31 Industrial Ave. Suite 1, Mahwah, N.J.  07430
+\bibitem{LYscintanddirection} C. Aberle, A. Elagin, H. J. Frisch, M. Wetstein, L. Winslow, `Measuring Directionality in Double-Beta Decay and Neutrino Interactions with Kiloton-Scale Scintillation Detectors', arXiv:1307.5813 [physics.ins-det]
 
 
 
