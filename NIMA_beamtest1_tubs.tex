@@ -157,10 +157,10 @@ Water based \sep liquid scintillator \sep beam test
 %% main text
 \section{Motivation}
 \label{introAndMotivation}
-In large water detectors, the Cerenkov radiation produced by a charged particle above the threshold can be used for particle identification, and the reconstruction of its direction and energy~\cite{superKkinematik}. However, all charged particles below the Cerenkov threshold are missed. Detecting these below-threshold particles is important for various applications. For example, in the search of the proton decay, in the $p^{+} \rightarrow K^{+} \overline{\nu}$ channel, where K\textsuperscript{+} is mostly below Cerenkov threshold and is invisible is a water detector. The use of the WbLS makes the kaon visible and allows for the 
+In large water detectors, the Cerenkov radiation produced by a charged particle above the threshold can be used for particle identification, and the reconstruction of its direction and energy~\cite{superKkinematik}. However, all charged particles below the Cerenkov threshold are missed. Detecting these below-threshold particles is important for various applications. For example, in the search of the proton decay, in the $p^{+} \rightarrow K^{+} \overline{\nu}$ channel, where K\textsuperscript{+} is mostly below Cerenkov threshold and is invisible in a water detector. The use of the WbLS makes the kaon visible and allows for the 
 separation of K$^{+}$, $\mu^{+}$ and e\textsuperscript{+} signals using timing and reduce background for this decay channel.
 
-In either LS or WbLS, the isotropic scintillation light is produced by the charged particle energy deposition via ionization, but the scintillator components may interfere with the Cerenkov ring detection. To detect K\textsuperscript{+} and preserve the Cerenkov ring, MC studies indicate that the light yield (LY) from the scintillator component int he WbLS should be ~100 optical photons/MeV.
+In either LS or WbLS, the isotropic scintillation light is produced by the charged particle energy deposition via ionization, but the scintillator components may interfere with the Cerenkov ring detection. To detect K\textsuperscript{+} and preserve the Cerenkov ring, MC studies indicate that the light yield (LY) from the scintillator component in the WbLS should be ~100 optical photons/MeV.
 
 Thus, WbLS potentially combines both the Cerenkov ring and scintillation light capabilities. It can preserve the particle identification for the particles above the Cerenkov threshold, and detect the charged particles below the threshold via the scintillation light. In addition, WbLS features the lower cost than pure LS and it is safer to handle[ask Minfang for reference].
 
@@ -200,25 +200,10 @@ Two tubs were used in the experiment:
 The T1 allows the capture of most of the light produced in the tub, whereas T2 allows for the observation of the light coming directly from the scintillation without the multiple wall reflections. An image of a tub is in Figure~\ref{whitetubpicture}. Both T1 and T2 have the same dimensions:
 
 \begin{itemize}
-	\item the lid is 19.05mm thick,
-	\item the walls and bottom are 6.35mm thick,
+	\item lid is 19.05mm thick,
+	\item walls and bottom are 6.35mm thick,
 	\item inner height and diameter are 150mm.
 \end{itemize}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=130mm]{beamtestschematics.pdf}
-\caption{Proton beam test experimental setup.} \label{experimentalsetup2}
-\end{figure}.
-
-A detailed setup readout scheme is shown in Figure~\ref{experimentalsetup2}. Both tubs were read out by Hamamatsu~\cite{hamamatsu} R7723 2"  Photo-multiplier tubes (PMT). An acrylic window transparent for the ultraviolet light (UVT) was used as a partition between the PMT and the liquid in the tub. The window was protruding through the lid and into the liquid by several millimeters to ensure that there are no air bubbles on its surface.
-
-A readout was by the 4-channel 14bit CAEN~\cite{caen} V1729A Flash Analog-to-Digital Converter (FADC). All tubs signals were connected to the FADC via a variable attenuation unit (Phillips Scientific~\cite{phillips} 804) and a variable amplifier unit (Phillips Scientific 778). For the T1 and the T2 readouts, the gain was set to the values of $\sim$2x. The first output from the amplifier goes to the FADC, with a dedicated channel for each tub. The second output from each amplifier channel was used for the single photo-electron (PE) calibration. The gain for the second amplification stage was set at $\sim$10x.
-
-All hodoscopes also were connected via $\sim$2x gain amplifier channels that allows signal splitting. H1 and H3 shares the same FADC channel with latter signal being delayed by 200ns. H2 was connected to the last remaining channel of the FADC.
-
-
-
 
 
 \begin{figure}[ht]
@@ -227,16 +212,31 @@ All hodoscopes also were connected via $\sim$2x gain amplifier channels that all
 \caption{PTFE tub detector with a PMT.} \label{whitetubpicture}
 \end{figure}
 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=130mm]{beamtestschematics.pdf}
+\caption{Proton beam test electronics readout setup.} \label{experimentalsetup2}
+\end{figure}
+
+A detailed setup readout scheme is shown in Figure~\ref{experimentalsetup2}. Both tubs were read out by Hamamatsu~\cite{hamamatsu} R7723 2"  Photo-multiplier tubes (PMT). An acrylic window transparent for the ultraviolet light (UVT) was used as a partition between the PMT and the liquid in the tub. The window was protruding through the lid and into the liquid by several millimeters to ensure that there are no air bubbles on its surface.
+
+A readout was performed by the 4-channel 14bit CAEN~\cite{caen} V1729A Flash Analog-to-Digital Converter (FADC). All tubs signals were connected to the FADC via a variable attenuation unit (Phillips Scientific~\cite{phillips} 804) and a variable amplifier unit (Phillips Scientific 778). For the T1 and the T2 readouts, the gain was set to the values of $\sim$2x. The first output from the amplifier goes to the FADC, with a dedicated channel for each tub. The second output from each amplifier channel was used for the single photo-electron (PE) calibration. The gain for the second amplification stage was set at $\sim$10x.
+
+All hodoscopes were also connected via $\sim$2x gain amplifier channels that allowed signal splitting. H1 and H3 shares the same FADC channel with latter signal being delayed by 200ns. H2 was connected to the last remaining channel of the FADC.
+
+
+
 \subsection{Triggering Scheme}
 \label{trigs}
-Triggering schema was realized using three 2cm x 2cm, 5mm thick plastic scintillator counters that were readout by 2" PMTs via an air waveguide in order to remove the PMTs from direct beam exposure. The signal from the front-most and a middle counters were used to form a bean trigger, as indicated in the Figure~\ref{experimentalsetup2}.
+Triggering schema was realized using three 2cm x 2cm, 5mm thick plastic scintillator counters that were readout by 2" PMTs via an air waveguide in order to remove the PMTs from direct beam exposure. The signal from the front-most and the middle counters were used to form a beam trigger, as indicated in the Figure~\ref{experimentalsetup2}.
 
 
 
 
 \subsection{Proton Beamline Description}
 \label{pbeamsection}
-A proton test beam was conducted at NASA Space Radiation Laboratory (NSRL) facility at BNL. As described above, the three proton beam energies were used:
+A proton test beam was conducted at NASA Space Radiation Laboratory (NSRL) facility at BNL. As described above, three following proton beam energies were used:
 210MeV, 475MeV and 2GeV. The beam had the following main characteristics:
 
 \begin{itemize}
@@ -279,7 +279,7 @@ A proton test beam was conducted at NASA Space Radiation Laboratory (NSRL) facil
 \caption{Typical PMT waveform with baseline check windows.} \label{typicalpmtsignal}
 \end{figure}
 
-The PMT signal is acquired as a waveform shown in Figure~\ref{typicalpmtsignal}. Total acquisition window is 2560 bins per event with each bin being 1ns wide; the signal is approximately centered and the approximate position is known beforehand. A 300ns window (central one in the figure, between the red and blue lines) is used to obtain the integrated signal area by summation. Each point is subtracted from the average baseline to achieve a positive sum. A typical signal is smaller then the chosen window width, however, there is a small spread in timing of the signals and we want' to be sure that all of the signal has been integrated. The size of the chosen window is the same for all samples and measurements.
+The PMT signal is acquired as a waveform shown in Figure~\ref{typicalpmtsignal}. Total acquisition window is 2560 bins per event with each bin being 1ns wide; the signal is approximately centered and the approximate position is known beforehand. A 300ns window (central one in the figure, between the red and blue lines) is used to obtain the integrated signal area by summation. Each point is subtracted from the average baseline to achieve a positive sum. A typical signal is smaller then the chosen window width, however, there is a small spread in timing of the signals and we want to be sure that all of the signal has been integrated. The size of the chosen window is the same for all samples and measurements.
 
 \begin{figure}[ht]
 \centering
@@ -299,14 +299,14 @@ A baseline is defined as the average value of all the points in the first integr
 
 The integrated area is a measure of total charge that can be converted to the PE yield using the single PE calibration of the PMTs. This allows to describe the measured signals independent of the hardware differences between the channels.
 
-The trigger information that is saved in the two additional FADC channels allows for the offline trigger requirements be used.
+The trigger information that is saved in the additional two FADC channels allows for the offline trigger requirements to be used.
 
 \subsection{Single Photo Electron Calibration}
 \label{singlePEcalibsection}
 
-A single PE calibration was conducted for both signal channels at the end of the test beam run. For it, the trigger is produced from the discriminator that follows the second amplifier for the T1 and T2 signals (separately for each, see Figure~\ref{experimentalsetup2}). The discriminator is set to $\sim$1/10\textsuperscript{th} of the single PE amplitude as to	allows for better PE signal detection efficiency than using random trigger. Additionally, this forces the PE signal to the signal window region of the FADC output for the simplified analysis and elimination of the partially captured signals. Note that a PE signal is much narrower and lower in amplitude/area then the beam signals that are typically many PEs that arrive with time distribution, thus a smaller integration window is used to reduce noise for cleaner calibration (50ns instead of 300ns).
+A single PE calibration was conducted for both signal channels at the end of the test beam run. For it, the trigger is produced from the discriminator that follows the second amplifier for the T1 and T2 signals (separately for each, see Figure~\ref{experimentalsetup2}). The discriminator is set to $\sim$1/10\textsuperscript{th} of the single PE amplitude as to allow for better PE signal detection efficiency than using random trigger. Additionally, this forces the PE signal into the signal window region of the FADC output for the simplified analysis and elimination of the partially captured signals. Note that a PE signal is much narrower and lower in amplitude/area then the beam signals that are typically many PEs that arrive with time distribution, thus a smaller integration window is used to reduce noise for cleaner calibration (50ns instead of 300ns).
 
-The signal area calibration is 168.0$\pm$1.2 ADC bins and 132.9$\pm$1.6 ADC bins for T1 and T2 respectively (the PE signal is summed within the window, so the unit of ADC bin is still used). A special care was taken to separately verify that this method yields the same calibration values as using the light-emitting diode (LED) scheme. For that, calibration runs using the described above scheme and using the dim LED pulses were compared to each other. The LED light level is chosen such that only $\sim$1/10\textsuperscript{th} of the events has the single PE signal to insure that these are the single photon detection responses.
+The signal area calibration is 168.0$\pm$1.2 ADC bins and 132.9$\pm$1.6 ADC bins for T1 and T2 respectively (the PE signal is summed within the window, so the unit of ADC bin is still used). A special care was taken to separately verify that this method yields the same calibration values as using the light-emitting diode (LED) scheme. For that, calibration runs using the scheme described above and the dim LED pulses were compared to each other. The LED light level is chosen such that only $\sim$1/10\textsuperscript{th} of the events has the single PE signal to ensure that these are the single photon detection responses.
 
 
 \subsection{Data quality selection}
@@ -320,7 +320,7 @@ The data quality selection is done as a single step before the data is analyzed.
 	\item ADC saturation check for H1 and H2.
 \end{itemize}
 
-Each check is intended to remove potential noise or multiple particles in an event. The saturation check indicates if several particles have passed thought the hodoscopes in a same beam spill that happens rarely at the intensity used.
+Each check is intended to remove potential noise or multiple particles in an event. The saturation check indicates that if several particles have passed through the hodoscopes in a same beam spill which happens rarely at the beam intensity used.
 
 
 \subsection{Light Yield Results}
@@ -333,12 +333,12 @@ Each check is intended to remove potential noise or multiple particles in an eve
 	\label{sampletubsignalfit}
 \end{figure}
 
-For each sample and energy, a histogram of the signal areas is computed. A fit using a Gaussian and a bin likelihood method is then performed. The fitting is done in two steps - first, a Gaussian is fitted in the range between the half of the maximum peak values to obtain the first approximation. Then, the fits around the found mean with 1, 1.5 and 2$\sigma$ are carried. This is done to estimate the uncertainty that the fit width is adding because of the second peak due to the two particles passing through the tub during the same trigger time. 
-Figure~\ref{sampletubsignalfit} shows the 1.5$\sigma$ fit of the single particle fit, and the two-particle peak is visible on it as well. This plot is in the ADC bins for clarity; single-PE calibration will be applied to all further plots.
+For each sample and energy, a histogram of the signal areas is computed. A fit using a Gaussian and a bin likelihood method is then performed. The fitting is done in two steps - first, a Gaussian is fitted in the range between the half of the maximum peak values to obtain the first approximation. Then, the fits around the found mean with 1, 1.5 and 2$\sigma$ are carried. This is done to estimate the uncertainty that the fitted signal width limitation is adding to the mean because of the second peak from the second particle passing through the tub during the same trigger time. 
+Figure~\ref{sampletubsignalfit} shows the 1.5$\sigma$ fit of the first particle peak, the second particle peak is visible on it as well. This plot is in the ADC bins for clarity; single-PE calibration will be applied to all further plots.
 
 
 
-The data for all the samples at all energies is then processed in the same way. Plots in Figure~\ref{tub1signalInPE} and in Figure~\ref{tub2signalInPE} show the light yield results in PE for the different samples and beam energies for Tub1 and tub2 respectively. Note that the LS light yield values plotted are reduced by a factor of 30. In addition, the data point for the LS at 210MeV for T1 is not going to be shown on further plots because of the readout saturation due to large light amount. Similarly, the water data is not shown for T2 due to very low signal for proton energies below the Cerenkov limit and some technical difficulties during the data acquisition.
+The data for all the samples at all energies is then processed in the same way. Plots in Figure~\ref{tub1signalInPE} and in Figure~\ref{tub2signalInPE} show the light yield results in PE for the different samples and beam energies for Tub1 and tub2 respectively. Note that the plotted LS light yield values are reduced by a factor of 30. In addition, the data point for the LS at 210MeV for T1 is not going to be shown on further plots because of the readout saturation due to large light amount. Similarly, the water data is not shown for T2 due to very low signal for proton energies below the Cerenkov limit and some technical difficulties during the data acquisition.
 
 \begin{figure}[ht]
 	\centering
@@ -363,7 +363,7 @@ The data for all the samples at all energies is then processed in the same way. 
 \subsection{Energy deposition}
 \label{edepsection}
 
-In order to assess the PE/MeV light yield of each sample, the energy deposition in each sample is needed. Two methods were used for this purpose: a GEANT4 simulation of the beamline setup with the deposition being the mean of the 1000 runs at each energy, and a simplified code that would calculate the proton energy loss along a straight line path through the tubs and hodoscopes with small steps, using the proton stopping power and range tables (PSTAR) from the National Institute of Standards and Technology (NIST). The WbLS was modeled as water, and the LS as toluene. 
+In order to assess the PE/MeV light yield of each sample, the energy deposition in each sample is needed. Two methods were used for this purpose: a GEANT4 simulation of the beamline setup with the most likely deposition being the mean of the 1000 runs at each energy, and a simplified code that would calculate the proton energy loss along a straight line path through the tubs and hodoscopes with small steps, using the proton stopping power and range tables (PSTAR) from the National Institute of Standards and Technology (NIST). The WbLS was modeled as water, and the LS as toluene. 
 
 
 
@@ -402,9 +402,9 @@ In order to assess the PE/MeV light yield of each sample, the energy deposition 
 	\label{fig:tub2signalInPEperMeV}
 \end{figure}
 
-The resulting energy depositions are listed in Table~\ref{tab:EnergyDepositionInSamples}. The difference between the two methods is taken as the uncertainty for the values obtained (summed as square root of the sum of the squares with the RMS of the mean). The converted into the PE/MeV light yield is shown in Figure~\ref{fig:tub1signalInPEperMeV} for the T1 and in Figure~\ref{fig:tub2signalInPEperMeV} for the T2.
+The resulting energy depositions are listed in Table~\ref{tab:EnergyDepositionInSamples}. The difference between two methods is taken as the uncertainty for the values obtained (summed as square root of the sum of the squares with the RMS of the mean). The converted into the PE/MeV light yield is shown in Figure~\ref{fig:tub1signalInPEperMeV} for the T1 and in Figure~\ref{fig:tub2signalInPEperMeV} for the T2.
 
-We see that the PE/MeV light yield is the same for LS at proton energies of 2GeV and 475MeV on both tubs, indicating that the Cerenkov light contribution is negligible for LS. It is not so for the WbLS, there is a significant LY change between these two energies. However, at 475MeV, there is virtually no Cerenkov light contribution to the total LY, thus, can use the data at this energy for LS to WbLS comparison and for obtaining the LY of the scintillator components of the WbLS. Figure~\ref{fig:475MEV_RatioToLS} and Figure~\ref{fig:210MEV_RatioToLS} show the ratio of the WbLS signal to the LS signal for the T1 and T2 at the proton energy of 475MeV, and the same ratio for the T2 only for the 210MeV (due to the saturation of the LS signal in T1 at this energy).
+We see that the PE/MeV light yield is the same for LS at proton energies of 2GeV and 475MeV on both tubs, indicating that the Cerenkov light contribution is negligible for LS. It is not the same for the WbLS as there is a significant LY change between these two energies. However, at 475MeV, there is virtually no Cerenkov light contribution to the total LY, thus we can use the data at this energy for LS to WbLS comparison and for obtaining the LY of the scintillator components of the WbLS. Figure~\ref{fig:475MEV_RatioToLS} and Figure~\ref{fig:210MEV_RatioToLS} show the ratio of the WbLS signal to the LS signal for the T1 and T2 at the proton energy of 475MeV, and the same ratio for the T2 only for the 210MeV (due to the saturation of the LS signal in T1 at this energy).
 
 \begin{figure}[ht]
 	\centering
@@ -422,13 +422,13 @@ We see that the PE/MeV light yield is the same for LS at proton energies of 2GeV
 
 \subsection{Light Yield in Photons/MeV}
 
-An estimate of the LY in photons/MeV is also possible. The calibration needed here is to estimate the efficiency if the PMT readout from the T1 and T2. Typically, this is a difficult task to carry out exactly, so two simple methods have been used to do this estimate.
+An estimate of the LY in photons/MeV is also possible. The calibration is needed here to estimate the efficiency of the PMT readouts from the T1 and T2. Typically, this is a difficult task to carry out exactly, so two simple methods have been used to do this estimate.
 
-First method is based on the fact that the LY is photons is known for the LS to be ~10k photons/MeV for a MIP signal~\cite{LYscintanddirection}. Since the proton at 2GeV has the ~same dE/dx as MIP, this dataset can be used to get the approximate efficiency for each tub (e.g. PE to photon conversion) and use it for the WbLS data. The second one can be used for T1 only and it was used to check the validity of the first method. The difference between the methods was added to the total uncertainty of the result. For T1, we can use the 2GeV proton data on water to try and estimate the number of the protons produced using the Equation~\ref{eq:cherenkovlight} that is commonly used to estimate the photon LY for the Cerenkov radiation in water [need reference or no/].
+First method is based on the fact that the LY in photons for the LS is known to be ~10k photons/MeV for a MIP signal~\cite{LYscintanddirection}. Since the proton at 2GeV has the ~same dE/dx as MIP, this dataset can be used to get the approximate efficiency for each tub (e.g. PE to photon conversion) for the WbLS data. The second one can be used for T1 only and it was used to check the validity of the first method. The difference between the methods was added to the total uncertainty of the result. For T1, we can use the 2GeV proton data on water to try and estimate the number of the protons produced using the Equation~\ref{eq:cherenkovlight} that is commonly used to estimate the photon LY for the Cerenkov radiation in water [need reference or no/].
 
 \begin{equation} \frac{dN}{dx} \approx 370 z^2 (E_{max} - E_{min} - \frac{1}{\beta^2} \frac{E_{max} - E_{min}}{n^2_{ave}}) \label{eq:cherenkovlight} \end{equation}
 
-The average index of refraction for the optical range was used, the $E_{max}$ and $E_{min}$ have been taken from the PMT sensitivity data. To get a better estimate, the sensitivity range for the T1 PMT was divided into a number of small sub-ranges with ~constant sensitivity and the results were weighted by the sensitivity and combined together for a better estimate. Using the resulting PE to photon conversion, the 2GeV proton LS data was used to compare the number produced by the second method to the value used in the first method. The result cave very close to be 9713 photons/MeV for the LS using the second method for T1.
+The average index of refraction for the optical range was used, the $E_{max}$ and $E_{min}$ have been taken from the PMT sensitivity data. To get a better estimate, the sensitivity range for the T1 PMT was divided into a number of small sub-ranges with ~constant sensitivity and the results were weighted by the sensitivity and combined together for a better estimate. Using the resulting PE to photon conversion, the 2GeV proton LS data was used to compare the number produced by the second method to the value used in the first method. The result came very close to be 9713 photons/MeV for the LS using the second method for T1.
 
 The estimate results for the WbLS data are presented in Figure~\ref{fig:tub1signalInPhotonsperMEV} and in Figure~\ref{fig:tub2signalInPhotonsperMEV} for the T1 and T2 respectively. As it can be seen from these figures, the estimate shows that the goal of about 100 photons/MeV has been reached using the WbLS2 sample, and different LY are possible by adjusting the concentrations.
 
@@ -454,11 +454,11 @@ A number of the systematic effects have been identified. Their effects have been
 
 During the experiment, the tubs with samples had to be disconnected and samples changed. An effect on the PMT of turning biasing on and off and exposing the PMT to ambient light during the disconnects. There is some minor variation in PMT noise and gain for less than 2 minutes after bias is turned on before a steady state is reached. Typically, there was at least a 5 to 10-minute interval between the installing the new sample in the beamline and data taking (the time was needed for the beam tuning process) thus greatly diminishing the influence of this effect on the data. In addition, there was very small variation in gain between each steady state; this variation has been added into the single PE calibration uncertainty.
 
-A long-term stability of the single PE calibration was studies after the data taking for the 450 hours. The LED calibration was collected over 2h periods and the resulting variation (~1\%) was added into the single PE calibration uncertainty.
+A long-term stability of the single PE calibration was studies after the data taking for the 450 hours. The LED calibration was collected over 2h periods and the resulting variation ($\sim$1\%) was added into the single PE calibration uncertainty.
 
 The effects on the result due to the fitting procedure has been described in subsection~\ref{lightyieldsection}.
 
-Another systematic effect arises from the window size selection process during the waveform analysis described in subsection~\ref{waveformanalysis}. The integration window size had to be optimized to fit all signal widths from all the data samples collected. If the window is too narrow then some signal may be lost in the integration, if its too large - too much noise will be integrated together with the signal and may add a non-zero contribution due to not all noise being random. A comprehensive study was carried out to determine the window size (300ns) and the effect of this choice on the fitted means for each sample. The effect turned out to be small (the largest contribution of this effect to one of the samples being less then ~0.5\%, smaller yet for all others) and it is accounted for in the total fit uncertainty together with the uncertainties estimated due to the fitting procedure.
+Another systematic effect arises from the window size selection process during the waveform analysis described in subsection~\ref{waveformanalysis}. The integration window size had to be optimized to fit all signal widths from all the data samples collected. If the window is too narrow then some signal may be lost in the integration, if its too large - too much noise will be integrated together with the signal and may add a non-zero contribution due to not all noise being random. A comprehensive study was carried out to determine the window size (300ns) and the effect of this choice on the fitted means for each sample. The effect turned out to be small (the largest contribution of this effect to one of the samples being less then $\sim$0.5\%, smaller yet for all others) and it is accounted for in the total fit uncertainty together with the uncertainties estimated due to the fitting procedure.
 
 
  \section{Conclusion}
